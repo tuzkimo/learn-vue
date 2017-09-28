@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const root = 'https://cnodejs.org/api/v1'
+const root = '/api/v1'
 
 const toType = obj => ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
 
