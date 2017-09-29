@@ -1,27 +1,27 @@
 <template>
   <div>
-    <Header></Header>
+    <HeaderSection></HeaderSection>
     <div class="article-list">
       <ul>
         <li v-for="topic in topics" :key="topic.id">
-          <time v-text="$utils.descTime(topic.create_at)"></time>
-          <router-link :to="'/content/' + topic.id">
+          <time v-text="`Posted ${$utils.descTime(topic.create_at)}`"></time>
+          <router-link :to="`/content/${topic.id}`">
             {{ topic.title }}
           </router-link>
         </li>
       </ul>
     </div>
-    <Footer></Footer>
+    <FooterSection></FooterSection>
   </div>
 </template>
 
 <script>
-  import Header from '@/components/header'
-  import Footer from '@/components/footer'
+  import HeaderSection from '@/components/header'
+  import FooterSection from '@/components/footer'
   export default {
     components: {
-      Header,
-      Footer
+      HeaderSection,
+      FooterSection
     },
     data () {
       return {

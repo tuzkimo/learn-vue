@@ -7,17 +7,17 @@ const descTime = time => {
   let minutePeriod = timePeriod / (60 * 1000)
 
   if (yearPeriod >= 1) {
-    return `Posted ${Math.trunc(yearPeriod)} years age`
+    return `${Math.trunc(yearPeriod)} years age`
   } else if (monthPeriod >= 1) {
-    return `Posted ${Math.trunc(monthPeriod)} months age`
+    return `${Math.trunc(monthPeriod)} months age`
   } else if (dayPeriod >= 1) {
-    return `Posted ${Math.trunc(dayPeriod)} days age`
+    return `${Math.trunc(dayPeriod)} days age`
   } else if (hourPeriod >= 1) {
-    return `Posted ${Math.trunc(hourPeriod)} hours age`
+    return `${Math.trunc(hourPeriod)} hours age`
   } else if (minutePeriod >= 1) {
-    return `Posted ${Math.trunc(minutePeriod)} minutes age`
+    return `${Math.trunc(minutePeriod)} minutes age`
   } else {
-    return `Posted just a moment`
+    return `just a moment`
   }
 }
 
